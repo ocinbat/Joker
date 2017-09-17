@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
+using Joker.Data;
 using Joker.Objects;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Joker.Controllers
 {
@@ -10,23 +14,17 @@ namespace Joker.Controllers
     [Route("api/jokes")]
     public class JokesController : Controller
     {
-        private static List<Joke> Jokes;
+        private readonly DataContext _context;
 
-        static JokesController()
+        public JokesController(DataContext context)
         {
-            Jokes = new List<Joke>();
-            Jokes.Add(new Joke()
-            {
-                Id = Guid.NewGuid(),
-                Content = "This is the funniest joke ever!",
-                LikeCount = 42
-            });
+            _context = context;
         }
 
         [HttpGet("")]
         public async Task<IActionResult> QueryJokes()
         {
-            return Ok(Jokes);
+            return Ok(await _context.Jokes.ToListAsync());
         }
     }
 }
