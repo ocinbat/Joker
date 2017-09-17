@@ -6,5 +6,6 @@ namespace Joker.Objects
     {
         public Guid Id { get; set; }
         public string Content { get; set; }
+        public long LikeCount { get; set; }
     }
 }

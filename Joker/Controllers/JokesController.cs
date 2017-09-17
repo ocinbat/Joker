@@ -18,7 +18,8 @@ namespace Joker.Controllers
             Jokes.Add(new Joke()
             {
                 Id = Guid.NewGuid(),
-                Content = "This is the funniest joke ever!"
+                Content = "This is the funniest joke ever!",
+                LikeCount = 42
             });
         }
 
