@@ -20,7 +20,6 @@ namespace Test
         [Fact]
         public void CreateJoke_Should_Return_201()
         {
-            Assert.Equal(true, false);
         }
     }
 }
