@@ -11,6 +11,7 @@ RUN dotnet restore Test/Test.csproj
 
 COPY . .
 
+ENV TEAMCITY_PROJECT_NAME=Joker
 RUN dotnet test Test/Test.csproj
 RUN dotnet publish Joker/Joker.csproj -o /publish
 
