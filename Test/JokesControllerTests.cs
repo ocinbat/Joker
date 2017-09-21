@@ -16,5 +16,10 @@ namespace Test
         public void QueryJokes_Should_Return_List_Of_Jokes()
         {
         }
+
+        [Fact]
+        public void CreateJoke_Should_Return_201()
+        {
+        }
     }
 }
