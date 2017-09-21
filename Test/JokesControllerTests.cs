@@ -6,7 +6,6 @@ using Joker.Data;
 using Joker.Objects;
 using Microsoft.EntityFrameworkCore;
 using Moq;
-using Ploeh.AutoFixture;
 using Xunit;
 
 namespace Test
