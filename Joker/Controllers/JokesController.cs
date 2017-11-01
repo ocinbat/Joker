@@ -14,17 +14,10 @@ namespace Joker.Controllers
     [Route("api/jokes")]
     public class JokesController : Controller
     {
-        private readonly DataContext _context;
-
-        public JokesController(DataContext context)
-        {
-            _context = context;
-        }
-
         [HttpGet("")]
         public async Task<IActionResult> QueryJokes()
         {
-            return Ok(await _context.Jokes.ToListAsync());
+            return Ok();
         }
     }
 }
