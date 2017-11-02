@@ -27,7 +27,7 @@ spec:
       name: joker
     spec:
       containers:
-      - image: ocinbat/joker:ci-15
+      - image: ocinbat/joker:ci-16
         imagePullPolicy: Always
         name: joker
         readinessProbe:
